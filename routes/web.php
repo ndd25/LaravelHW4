@@ -31,6 +31,6 @@ Route::post('/contact', function () {
     echo "Body: " . $data['body'] . '<br>';
 
     echo 'Thank you ' . get_current_user() . '!';
-
+    echo 'Thank you ' . get_current_user() . '!';
 
 });
