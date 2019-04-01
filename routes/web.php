@@ -25,12 +25,15 @@ Route::get('/contact', function () {
 
 Route::post('/contact', function () {
 
-    $data = request()->all();
+    $address = request()->all();
 
-    echo "Email: " . $data['email'] . '<br>';
-    echo "Body: " . $data['body'] . '<br>';
+    $username = implode('@', explode('@', $address['email'], -1));
 
-    echo 'Thank you ' . get_current_user() . '!';
-    echo 'Thank you ' . get_current_user() . '!';
+    echo "<link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css' rel='stylesheet'>";
+
+    echo "Email: " . $address['email'] . '<br>';
+    echo "Body: " . $address['body'] . '<br>';
+    echo 'Name: ' . $username;
+
 
 });
