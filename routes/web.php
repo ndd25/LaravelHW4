@@ -31,6 +31,7 @@ Route::post('/contact', function () {
 
     echo "<link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css' rel='stylesheet'>";
 
+    echo "<h1>Thank You</h1>";
     echo "Email: " . $address['email'] . '<br>';
     echo "Body: " . $address['body'] . '<br>';
     echo 'Name: ' . $username;
